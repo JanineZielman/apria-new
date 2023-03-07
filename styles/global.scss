@@ -28,7 +28,7 @@ $black: #000000;
 $grey: #A7A7A7;
 
 $headline: 60px;
-$subtitle: 40px;
+$subtitle: 36px;
 $large-body: 26px;
 $body: 16px;
 $captions: 13px;
@@ -42,6 +42,8 @@ $button: 12px;
 .subtitle{
   font-size: $subtitle;
   font-family: Francois;
+  line-height: 1;
+  font-weight: 100;
 }
 
 .large-body{
@@ -68,4 +70,29 @@ body{
   background-color: $pink;
   color: $red;
   font-family: Baskerville;
+}
+
+h1, h2{
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+  .post-item{
+    width: 20vw;
+    border-top: 1px solid $red;
+    border-bottom: 1px solid $red;
+    padding: 14px 0;
+    img{
+      width: 100%;
+      height: auto;
+      mix-blend-mode: luminosity;
+    }
+    .subtitle{
+      padding-left: 20px;
+    }
+  }
 }
