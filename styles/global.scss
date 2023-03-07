@@ -1,8 +1,71 @@
 // Global styles
-// These styles are available on all pages.
-// If a component has it's own styles, they can be found within the component's respective directory.
 
-@import "breakpoints";
-@import "css-variables";
-@import "base";
-@import "utilities";
+// @import "breakpoints";
+// @import "css-variables";
+// @import "base";
+// @import "utilities";
+
+@font-face {
+  font-family: Baskerville;
+  src: url(fonts/Libre.woff2);
+}
+
+@font-face {
+  font-family: Francois;
+  src: url(fonts/Francois.woff2);
+}
+
+@font-face {
+  font-family: Ahamono;
+  src: url(fonts/AHAMONO-Regular.woff2);
+}
+
+
+$white: #FFFFFF;
+$red:#FF0000;
+$pink: #FCE4E9;
+$black: #000000;
+$grey: #A7A7A7;
+
+$headline: 60px;
+$subtitle: 40px;
+$large-body: 26px;
+$body: 16px;
+$captions: 13px;
+$button: 12px;
+
+.headline{
+  font-size: $headline;
+  font-family: Francois;
+}
+
+.subtitle{
+  font-size: $subtitle;
+  font-family: Francois;
+}
+
+.large-body{
+  font-size: $large-body;
+  font-family: Baskerville;
+}
+
+.body{
+  font-size: $body;
+  font-family: Baskerville;
+}
+
+.captions{
+  font-size: $captions;
+  font-family: Ahamono;
+}
+
+.button{
+  font-size: $button;
+  font-family: Ahamono;
+}
+
+body{
+  background-color: $pink;
+  color: $red;
+  font-family: Baskerville;
+}

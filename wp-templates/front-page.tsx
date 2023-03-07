@@ -31,17 +31,14 @@ export default function Component() {
       />
       <Main>
         <Container>
-          <Hero title={'Front Page'} />
-          <div className="text-center">
-            <p>This page is utilizing the "front-page" WordPress template.</p>
-            <code>wp-templates/front-page.js</code>
-          </div>
+          
         </Container>
       </Main>
       <Footer title={siteTitle} menuItems={footerMenu} />
     </>
   );
 }
+
 
 Component.query = gql`
   ${BlogInfoFragment}
@@ -72,3 +69,58 @@ Component.variables = () => {
     footerLocation: MENUS.FOOTER_LOCATION,
   };
 };
+
+
+// import { getNextStaticProps } from '@faustjs/next';
+// import { client, OrderEnum, PostObjectsConnectionOrderbyEnum } from 'client';
+// import { Footer, Header } from '../components';
+// import { GetStaticPropsContext } from 'next';
+// import Head from 'next/head';
+// import { useRouter } from 'next/router';
+// import React from 'react';
+// import styles from 'scss/pages/posts.module.scss';
+
+// const POSTS_PER_PAGE = 6;
+
+// export default function Page() {
+//   const { query = {} } = useRouter();
+//   const { postSlug, postCursor } = query;
+//   const { usePosts, useQuery } = client;
+//   const generalSettings = useQuery().generalSettings;
+//   const isBefore = postSlug === 'before';
+//   const posts = usePosts({
+//     after: !isBefore ? (postCursor as string) : undefined,
+//     before: isBefore ? (postCursor as string) : undefined,
+//     first: !isBefore ? POSTS_PER_PAGE : undefined,
+//     last: isBefore ? POSTS_PER_PAGE : undefined,
+//   });
+
+//   if (useQuery().$state.isLoading) {
+//     return null;
+//   }
+
+//   return (
+//     <>
+
+//       <Head>
+//         <title>
+//           {generalSettings.title} - {generalSettings.description}
+//         </title>
+//       </Head>
+
+//       <main className="content content-index">
+        
+        
+//       </main>
+
+//       <Footer />
+//     </>
+//   );
+// }
+
+// export async function getStaticProps(context: GetStaticPropsContext) {
+//   return getNextStaticProps(context, {
+//     Page,
+//     client,
+//   });
+// }

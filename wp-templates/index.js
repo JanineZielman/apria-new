@@ -1,6 +1,6 @@
 import category from './category';
 import tag from './tag';
-import frontPage from './front-page';
+import frontPage from './front-page.tsx';
 import page from './page';
 import single from './single';
 
